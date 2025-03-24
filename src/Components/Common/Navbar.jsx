@@ -102,7 +102,7 @@ const Navbar = () => {
               className="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent flex items-center"
             >
               <span className="mr-2">🚀</span>
-              <span>Portfolio</span>
+              <span>Tayyab Hussain shah</span>
             </Link>
           </motion.div>
 
