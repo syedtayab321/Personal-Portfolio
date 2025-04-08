@@ -13,14 +13,14 @@ const experiences = [
   {
     company: "CsEra Pvt Ltd",
     role: "Full Stack Developer",
-    duration: "Jan 2023 - Dec 2023",
+    duration: "June 2023 - Feb 2024",
     description:
       "Developed Full Stack Web and mobile applications using React, Next.js, Node.js, Django, Laravel, Flutter, and Firebase. Implemented CI/CD pipelines and optimized database performance.",
   },
   {
     company: "First Light - UAE Based Company",
     role: "Flutter App Developer",
-    duration: "Jan 2024 - Nov 2024",
+    duration: "May 2024 - Nov 2024",
     description:
       "Built cross-platform mobile applications with Flutter, integrated RESTful APIs, and implemented Firebase authentication and real-time database solutions.",
   },
