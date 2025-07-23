@@ -4,6 +4,27 @@ import { useInView } from "react-intersection-observer";
 
 const experiences = [
   {
+    company: "mimAR | 3D Architectural Visualization Company",
+    role: "Software Developer (Onsite)",
+    duration: "June 2025 - Present",
+    description:
+      "Led the development of architectural visualization web applications at mimAR | 3D Architectural Visualization Company in Islamabad, utilizing Flutter and Node.js. Designed and implemented scalable backend solutions, and collaborated with cross-functional teams.",
+  },
+  {
+    company: "Mecarvi Prints",
+    role: "Frontend Developer (Part-Time)",
+    duration: "Jan 2025 - July 2025",
+    description:
+      "Developed responsive and user-friendly web interfaces using React. Collaborated with design teams to implement visually appealing UI components and optimized front-end performance.",
+  },
+  {
+    company: "FalconXoft",
+    role: "Full Stack Developer",
+    duration: "Jan 2025 - March 2025",
+    description:
+      "Led development of enterprise web applications using React, Next.js, and Django. Architected scalable backend solutions and mentored junior developers.",
+  },
+  {
     company: "Fiver/Upwork",
     role: "Flutter App Developer",
     duration: "Jan 2021 - Present",
@@ -24,13 +45,6 @@ const experiences = [
     description:
       "Built cross-platform mobile applications with Flutter, integrated RESTful APIs, and implemented Firebase authentication and real-time database solutions.",
   },
-  {
-    company: "FalconXoft",
-    role: "Full Stack Developer",
-    duration: "Jan 2025 - March 2025",
-    description:
-      "Led development of enterprise web applications using React, Next.js, and Django. Architected scalable backend solutions and mentored junior developers.",
-  },
 ];
 
 const skills = [
@@ -46,16 +60,31 @@ const skills = [
 ];
 
 const technologies = [
-  "React", "Next.js", "Django", "Laravel", "Flutter", 
-  "Firebase", "Node.js", "GraphQL", "Docker", "AWS",
-  "Git", "CI/CD", "REST APIs", "MongoDB", "PostgreSQL",
-  "Tailwind CSS", "Material UI", "Redux", "TypeScript"
+  "React",
+  "Next.js",
+  "Django",
+  "Laravel",
+  "Flutter",
+  "Firebase",
+  "Node.js",
+  "GraphQL",
+  "Docker",
+  "AWS",
+  "Git",
+  "CI/CD",
+  "REST APIs",
+  "MongoDB",
+  "PostgreSQL",
+  "Tailwind CSS",
+  "Material UI",
+  "Redux",
+  "TypeScript",
 ];
 
 const ExperienceSkills = () => {
   const [ref, inView] = useInView({
     threshold: 0.2,
-    triggerOnce: false
+    triggerOnce: false,
   });
 
   // Animation variants
@@ -65,9 +94,9 @@ const ExperienceSkills = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
-        delayChildren: 0.3
-      }
-    }
+        delayChildren: 0.3,
+      },
+    },
   };
 
   const itemVariants = {
@@ -77,9 +106,9 @@ const ExperienceSkills = () => {
       opacity: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   const progressBarVariants = {
@@ -89,9 +118,9 @@ const ExperienceSkills = () => {
       transition: {
         duration: 1.5,
         type: "spring",
-        damping: 10
-      }
-    })
+        damping: 10,
+      },
+    }),
   };
 
   return (
@@ -105,14 +134,14 @@ const ExperienceSkills = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <motion.div variants={itemVariants} className="text-center mb-16">
-          <motion.h2 
-            className="text-4xl sm:text-5xl font-extrabold text-yellow-400 mb-4"
+          <motion.h2
+            className="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 mb-4"
             whileHover={{ scale: 1.02 }}
           >
             Experience & Skills
           </motion.h2>
-          <motion.div 
-            className="h-1 w-20 bg-yellow-400 mx-auto"
+          <motion.div
+            className="h-1 w-20 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto"
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.8 }}
@@ -120,7 +149,7 @@ const ExperienceSkills = () => {
         </motion.div>
 
         {/* Experience Section */}
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20"
         >
@@ -132,23 +161,29 @@ const ExperienceSkills = () => {
               className="relative bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700 shadow-lg overflow-hidden"
             >
               {/* Glow effect */}
-              <div className="absolute -top-4 -right-4 w-32 h-32 bg-yellow-400 rounded-full filter blur-3xl opacity-10"></div>
-              
+              <div className="absolute -top-4 -right-4 w-32 h-32 bg-blue-400 rounded-full filter blur-3xl opacity-10"></div>
+
               <div className="flex flex-col sm:flex-row gap-6 items-start">
                 <div className="flex-shrink-0">
-                  <div className="bg-gray-900 p-4 rounded-lg border border-yellow-400/30">
-                    <FaBriefcase className="text-yellow-400 text-3xl" />
+                  <div className="bg-gray-900 p-4 rounded-lg border border-blue-400/30">
+                    <FaBriefcase className="text-blue-400 text-3xl" />
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-1">{exp.company}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-1">
+                    {exp.company}
+                  </h3>
                   <div className="flex flex-wrap items-center gap-3 mb-3">
-                    <span className="px-3 py-1 bg-yellow-400/10 text-yellow-400 rounded-full text-sm font-medium">
+                    <span className="px-3 py-1 bg-blue-400/10 text-blue-400 rounded-full text-sm font-medium">
                       {exp.role}
                     </span>
-                    <span className="text-gray-400 text-sm">{exp.duration}</span>
+                    <span className="text-gray-400 text-sm">
+                      {exp.duration}
+                    </span>
                   </div>
-                  <p className="text-gray-300 leading-relaxed">{exp.description}</p>
+                  <p className="text-gray-300 leading-relaxed">
+                    {exp.description}
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -156,25 +191,25 @@ const ExperienceSkills = () => {
         </motion.div>
 
         {/* Skills Section */}
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           className="grid grid-cols-1 lg:grid-cols-2 gap-12"
         >
           {/* Skills Progress Bars */}
           <motion.div variants={itemVariants}>
-            <motion.h3 
-              className="text-3xl font-semibold text-yellow-400 mb-8 flex items-center gap-4"
+            <motion.h3
+              className="text-3xl font-semibold text-blue-400 mb-8 flex items-center gap-4"
               whileHover={{ x: 5 }}
             >
-              <div className="p-3 bg-yellow-400/10 rounded-lg">
-                <FaTools className="text-yellow-400 text-2xl" />
+              <div className="p-3 bg-blue-400/10 rounded-lg">
+                <FaTools className="text-blue-400 text-2xl" />
               </div>
               Technical Skills
             </motion.h3>
-            
+
             <div className="space-y-6">
               {skills.map((skill, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   variants={itemVariants}
                   className="group"
@@ -183,7 +218,7 @@ const ExperienceSkills = () => {
                     <span className="text-gray-300 font-medium group-hover:text-white transition-colors">
                       {skill.name}
                     </span>
-                    <span className="text-yellow-400 font-medium">
+                    <span className="text-blue-400 font-medium">
                       {skill.percentage}%
                     </span>
                   </div>
@@ -193,7 +228,7 @@ const ExperienceSkills = () => {
                       variants={progressBarVariants}
                       initial="hidden"
                       animate="visible"
-                      className="h-full bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full"
+                      className="h-full bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"
                     />
                   </div>
                 </motion.div>
@@ -203,17 +238,17 @@ const ExperienceSkills = () => {
 
           {/* Technologies Badges */}
           <motion.div variants={itemVariants}>
-            <motion.h3 
-              className="text-3xl font-semibold text-yellow-400 mb-8 flex items-center gap-4"
+            <motion.h3
+              className="text-3xl font-semibold text-purple-400 mb-8 flex items-center gap-4"
               whileHover={{ x: 5 }}
             >
-              <div className="p-3 bg-yellow-400/10 rounded-lg">
-                <FaCode className="text-yellow-400 text-2xl" />
+              <div className="p-3 bg-purple-400/10 rounded-lg">
+                <FaCode className="text-purple-400 text-2xl" />
               </div>
               Tools & Technologies
             </motion.h3>
-            
-            <motion.div 
+
+            <motion.div
               className="flex flex-wrap gap-3"
               variants={containerVariants}
             >
@@ -221,12 +256,12 @@ const ExperienceSkills = () => {
                 <motion.span
                   key={index}
                   variants={itemVariants}
-                  whileHover={{ 
+                  whileHover={{
                     y: -3,
                     scale: 1.05,
-                    backgroundColor: "rgba(234, 179, 8, 0.2)"
+                    backgroundColor: "rgba(99, 102, 241, 0.2)",
                   }}
-                  className="inline-block bg-gray-800 text-gray-300 px-4 py-2 rounded-full text-sm font-medium border border-gray-700 cursor-default hover:border-yellow-400/30 transition-all"
+                  className="inline-block bg-gray-800 text-gray-300 px-4 py-2 rounded-full text-sm font-medium border border-gray-700 cursor-default hover:border-blue-400/30 transition-all"
                 >
                   {tech}
                 </motion.span>

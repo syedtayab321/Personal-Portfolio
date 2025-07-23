@@ -42,7 +42,7 @@ const ContactMe = () => {
   const buttonHover = {
     hover: {
       y: -5,
-      backgroundColor: "rgba(234, 179, 8, 0.1)",
+      backgroundColor: "rgba(59, 130, 246, 0.1)",
       transition: {
         duration: 0.3,
       },
@@ -57,7 +57,7 @@ const ContactMe = () => {
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       ref={ref}
-      className="min-h-screen flex flex-col justify-between bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-white"
+      className="min-h-screen flex flex-col justify-between bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white"
     >
       {/* Contact Section */}
       <motion.div
@@ -66,13 +66,13 @@ const ContactMe = () => {
       >
         <motion.div variants={item} className="mb-12">
           <motion.h2
-            className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600 mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 mb-6"
             whileHover={{ scale: 1.02 }}
           >
             Let's Connect!
           </motion.h2>
           <motion.div
-            className="h-1 w-20 bg-yellow-400 mx-auto"
+            className="h-1 w-20 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto"
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.8 }}
@@ -98,7 +98,7 @@ const ContactMe = () => {
             whileTap="tap"
             variants={buttonHover}
             href="mailto:tayabsajid5@gmail.com"
-            className="flex items-center gap-3 border-2 border-yellow-500 text-yellow-500 px-8 py-4 rounded-full font-semibold hover:bg-yellow-500 hover:text-gray-900 transition-all text-lg"
+            className="flex items-center gap-3 border-2 border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500/10 transition-all text-lg"
           >
             <FaEnvelope className="text-2xl" />
             <span>Email Me</span>
@@ -112,7 +112,7 @@ const ContactMe = () => {
             href="https://wa.me/+923365298230"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 border-2 border-yellow-500 text-yellow-500 px-8 py-4 rounded-full font-semibold hover:bg-yellow-500 hover:text-gray-900 transition-all text-lg"
+            className="flex items-center gap-3 border-2 border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500/10 transition-all text-lg"
           >
             <FaWhatsapp className="text-2xl" />
             <span>WhatsApp Me</span>
@@ -125,22 +125,22 @@ const ContactMe = () => {
           <h3 className="text-xl text-gray-400 mb-6">Or find me on</h3>
           <div className="flex justify-center gap-6">
             <motion.a
-              whileHover={{ y: -5, scale: 1.1 }}
+              whileHover={{ y: -5, scale: 1.1, color: "#60a5fa" }}
               whileTap={{ scale: 0.9 }}
               href="https://github.com/syedtayab321"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-3xl text-gray-400 hover:text-yellow-400 transition-colors"
+              className="text-3xl text-gray-400 transition-colors"
             >
               <FaGithub />
             </motion.a>
             <motion.a
-              whileHover={{ y: -5, scale: 1.1 }}
+              whileHover={{ y: -5, scale: 1.1, color: "#818cf8" }}
               whileTap={{ scale: 0.9 }}
               href="https://www.linkedin.com/in/syed-tayyab-bukhari-485a0222b"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-3xl text-gray-400 hover:text-yellow-400 transition-colors"
+              className="text-3xl text-gray-400 transition-colors"
             >
               <FaLinkedin />
             </motion.a>
@@ -168,7 +168,7 @@ const ContactMe = () => {
             whileHover={{ scale: 1.02 }}
             className="text-sm text-gray-400 hover:text-white transition-colors"
           >
-            Crafted with <span className="text-yellow-400">♥</span> in Pakistan
+            Crafted with <span className="text-blue-400">♥</span> in Pakistan
           </motion.div>
         </div>
       </motion.footer>

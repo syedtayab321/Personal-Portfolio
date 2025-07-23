@@ -53,19 +53,33 @@ const Navbar = () => {
       transition: {
         type: "spring",
         stiffness: 100,
+        damping: 10,
       },
     },
+    hover: {
+      scale: 1.05,
+      transition: { duration: 0.2 }
+    }
   };
 
   const mobileMenuVariants = {
-    hidden: { opacity: 0, height: 0 },
+    hidden: { 
+      opacity: 0, 
+      height: 0,
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut",
+      }
+    },
     visible: {
       opacity: 1,
       height: "auto",
       transition: {
         duration: 0.3,
         ease: "easeInOut",
-      },
+        staggerChildren: 0.1,
+        delayChildren: 0.2
+      }
     },
     exit: {
       opacity: 0,
@@ -73,8 +87,21 @@ const Navbar = () => {
       transition: {
         duration: 0.2,
         ease: "easeInOut",
-      },
+      }
     },
+  };
+
+  const mobileItemVariants = {
+    hidden: { x: -20, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 10
+      }
+    }
   };
 
   return (
@@ -84,9 +111,9 @@ const Navbar = () => {
       transition={{ duration: 0.5, type: "spring" }}
       className={`fixed w-full z-50 ${
         scrolled
-          ? "bg-gray-900/95 backdrop-blur-md shadow-lg"
-          : "bg-gray-900/80 backdrop-blur-sm"
-      } transition-all duration-300`}
+          ? "bg-gray-900/95 backdrop-blur-lg shadow-xl"
+          : "bg-gray-900/90 backdrop-blur-md"
+      } transition-all duration-300 border-b border-gray-800`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -95,14 +122,15 @@ const Navbar = () => {
             initial={{ scale: 0.9 }}
             animate={{ scale: 1 }}
             whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             className="flex-shrink-0"
           >
             <Link
               to="/"
-              className="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent flex items-center"
+              className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent flex items-center"
             >
               <span className="mr-2">🚀</span>
-              <span>Tayyab Hussain shah</span>
+              <span>Syed Tayyab</span>
             </Link>
           </motion.div>
 
@@ -111,23 +139,28 @@ const Navbar = () => {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="hidden md:flex space-x-6"
+            className="hidden md:flex space-x-2"
           >
             {navLinks.map((link) => (
-              <motion.div key={link.path} variants={itemVariants}>
+              <motion.div 
+                key={link.path} 
+                variants={itemVariants}
+                whileHover="hover"
+                whileTap={{ scale: 0.95 }}
+              >
                 <Link
                   to={link.path}
-                  className={`relative px-3 py-2 text-lg font-medium transition-colors ${
+                  className={`relative px-4 py-2 text-lg font-medium transition-all rounded-lg ${
                     location.pathname === link.path
-                      ? "text-yellow-400"
-                      : "text-gray-300 hover:text-white"
+                      ? "text-white bg-gray-800/50"
+                      : "text-gray-300 hover:text-white hover:bg-gray-800/30"
                   }`}
                 >
                   {link.name}
                   {location.pathname === link.path && (
                     <motion.span
                       layoutId="nav-underline"
-                      className="absolute left-0 bottom-0 w-full h-0.5 bg-yellow-400"
+                      className="absolute left-1/2 bottom-1 h-0.5 w-4/5 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full transform -translate-x-1/2"
                       transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                     />
                   )}
@@ -138,8 +171,9 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <motion.div
-            whileTap={{ scale: 0.9 }}
             className="md:hidden flex items-center"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
           >
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -149,7 +183,7 @@ const Navbar = () => {
               <span className="sr-only">Open main menu</span>
               {isOpen ? (
                 <svg
-                  className="h-8 w-8 text-yellow-400"
+                  className="h-8 w-8 text-purple-400"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -164,7 +198,7 @@ const Navbar = () => {
                 </svg>
               ) : (
                 <svg
-                  className="h-8 w-8 text-gray-300 hover:text-yellow-400"
+                  className="h-8 w-8 text-gray-300 hover:text-blue-400"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -191,25 +225,41 @@ const Navbar = () => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="md:hidden overflow-hidden"
+            className="md:hidden overflow-hidden bg-gray-900/95 backdrop-blur-lg"
           >
-            <div className="px-2 pt-2 pb-4 space-y-1 sm:px-3 bg-gray-900/95 backdrop-blur-md">
+            <div className="px-2 pt-2 pb-4 space-y-2 sm:px-3">
               {navLinks.map((link) => (
                 <motion.div
                   key={link.path}
-                  initial={{ x: -20, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ type: "spring", stiffness: 100 }}
+                  variants={mobileItemVariants}
                 >
                   <Link
                     to={link.path}
-                    className={`block px-3 py-3 rounded-md text-lg font-medium ${
+                    className={`block px-4 py-3 rounded-lg text-lg font-medium transition-all ${
                       location.pathname === link.path
-                        ? "bg-gray-800 text-yellow-400"
-                        : "text-gray-300 hover:bg-gray-800 hover:text-white"
+                        ? "bg-gradient-to-r from-blue-600/20 to-purple-600/20 text-white"
+                        : "text-gray-300 hover:bg-gray-800/30 hover:text-white"
                     }`}
                   >
-                    {link.name}
+                    <div className="flex items-center">
+                      {link.name}
+                      {location.pathname === link.path && (
+                        <svg
+                          className="ml-2 h-4 w-4 text-purple-400"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={3}
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      )}
+                    </div>
                   </Link>
                 </motion.div>
               ))}

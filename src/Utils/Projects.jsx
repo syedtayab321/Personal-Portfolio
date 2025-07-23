@@ -1,80 +1,173 @@
-import house1 from './../assets/projectImages/HouseEase/Picture15.jpg';
-import house2 from './../assets/projectImages/HouseEase/Picture16.jpg';
-import house3 from './../assets/projectImages/HouseEase/Picture21.jpg';
-import house4 from './../assets/projectImages/HouseEase/Picture26.jpg';
-import house5 from './../assets/projectImages/HouseEase/Picture27.jpg';
-import houseThumbnail from './../assets/projectImages/HouseEase/thumbnail1.jpg';
+import pinnup1 from './../assets/projectImages/Pinnup/White Purple Gradient Mobile Apps Presentation .png';
+import pinnup2 from './../assets/projectImages/Pinnup/thumbnail1.jpg';
+import pinnup3 from './../assets/projectImages/Pinnup/image1.png';
+import pinnup4 from './../assets/projectImages/Pinnup/image2.png';
 
-import pinnup1 from './../assets/projectImages/Pinnup/image1.png';
-import pinnup2 from './../assets/projectImages/Pinnup/image2.png';
-import pinnup3 from './../assets/projectImages/Pinnup/image3.png';
-import pinnup4 from './../assets/projectImages/Pinnup/image4.png';
-import pinnupThumbnail from './../assets/projectImages/Pinnup/thumbnail1.jpg';
+import foodie1 from './../assets/projectImages/Food app/kwick_banner.png';
+import foodie2 from './../assets/projectImages/Food app/1.png';
+import foodie3 from './../assets/projectImages/Food app/kwick-vendor.png';
+import foodie4 from './../assets/projectImages/Food app/4.png';
 
-import carpulseMain from '../assets/projectImages/CarPulse/website1.png';
-import carpulse2 from '../assets/projectImages/CarPulse/website2.png'
-import carpulse3 from '../assets/projectImages/CarPulse/website3.png'
-import carpulse4 from '../assets/projectImages/CarPulse/website4.png'
-import carpulse5 from '../assets/projectImages/CarPulse/website5.png'
+import invoicegen1 from './../assets/projectImages/Invoice Generator/Pink 3D Mockups Sales Pitch Sales Presentation.png';
+import invoicegen2 from './../assets/projectImages/Invoice Generator/Screenshot_2025-07-18-00-24-43-358_com.example.invoice_generator.jpg';
+import invoicegen3 from './../assets/projectImages/Invoice Generator/Screenshot_2025-07-18-00-25-37-345_com.example.invoice_generator.jpg';
+import invoicegen4 from './../assets/projectImages/Invoice Generator/Screenshot_2025-07-18-15-29-29-728_com.example.invoice_generator-edit.jpg';
+
+import artleap1 from './../assets/projectImages/Artleap/White Purple Gradient Mobile Apps Presentation .png';
+import artleap2 from './../assets/projectImages/Artleap/Screenshot_2025-07-16-07-20-36-020_com.XrDIgital.ImaginaryVerse.jpg';
+import artleap3 from './../assets/projectImages/Artleap/Screenshot_2025-07-16-07-20-21-007_com.XrDIgital.ImaginaryVerse.jpg';
+import artleap4 from './../assets/projectImages/Artleap/Screenshot_2025-07-16-07-20-26-011_com.XrDIgital.ImaginaryVerse.jpg';
+
+import archive1 from './../assets/projectImages/Archiva/White Purple Gradient Mobile Apps Presentation  (1).png';
+import archive2 from './../assets/projectImages/Archiva/5.png';
+import archive3 from './../assets/projectImages/Archiva/4.png';
+import archive4 from './../assets/projectImages/Archiva/2.png';
+
+import shopswift1 from './../assets/projectImages/ecommerce_admin_portal/White Purple Gradient Mobile Apps Presentation  (1).png';
+import shopswift2 from './../assets/projectImages/ecommerce_admin_portal/Screenshot 2025-07-18 105638.png';
+import shopswift3 from './../assets/projectImages/ecommerce_admin_portal/Screenshot 2025-07-18 105621.png';
+import shopswift4 from './../assets/projectImages/ecommerce_admin_portal/Screenshot 2025-07-18 105715.png';
+
+
+import etravelers1 from './../assets/projectImages/e_travels/main.png';
+import etravelers2 from './../assets/projectImages/e_travels/login.png';
+import etravelers3 from './../assets/projectImages/e_travels/Screenshot 2025-07-19 144148.png';
+import etravelers4 from './../assets/projectImages/e_travels/Screenshot 2025-07-19 144329.png';
 
 const projects = [
-  {
-    id: "housease",
-    title: "HouseEase – Your Ultimate Property Management Solution",
-    description:
-      "HouseEase is an innovative web and mobile application designed to streamline the process of buying, selling, and renting properties. ",
-    techStack: "Flutter,Django,MySQL",
-    image: houseThumbnail,
-    images: [houseThumbnail, house2, house3, house4, house5],
-    link: "/projects/carpulse",
-    liveLink: "#",
-    repoLink: "https://github.com/syedtayab321/shiftease_frontend",
-    features: [
-      "Property Listings Management ",
-      "Advanced Search & Filters",
-      "Interactive Map Integration",
-      "Booking & Scheduling",
-      "Push Notifications & Alerts"
-    ],
-  },
   {
     id: "pinnup",
     title: "PinnUp , Social Media & Networking Platform",
     description:
-      " PinnUp is a dynamic social media platform designed for seamless networking, content sharing, and community engagement",
+      " PinnUp is a dynamic Event  platform designed for seamless event sharing, community engagement",
     techStack: "React,Django,PostgreSQL,AI",
-    image: pinnupThumbnail,
+    image: pinnup1,
     images: [pinnup1, pinnup2, pinnup3, pinnup4],
-    link: "/projects/carpulse",
+    link: "#",
     liveLink: "#",
     repoLink: "#",
     features: [
       "User Profiles & Customization ",
-      "News Feed & Post Sharing",
+      "Realtime Events and Functions",
       "Friend Requests & Connections",
       "Notifications & Alerts",
       "Privacy & Security Settings"
     ],
   },
   {
-    id: "carpulse",
-    title: " CarPulse - Your Ultimate Car Care Companion",
+    id: "Kwick",
+    title: "Kwick, Food Ordering & Community Platform",
     description:
-      "Keep your vehicle running smoothly with CarPulse - the one-stop solution for all your car service needs. From routine maintenance to emergency repairs.",
-    techStack: "React,JavaScript,Firebase",
-    image: carpulseMain,
-    images: [carpulseMain,carpulse2,carpulse3,carpulse4,carpulse5],
-    link: "/projects/carpulse",
-    liveLink: "https://car-pulse.vercel.app/",
-    repoLink: "https://github.com/syedtayab321/CarPulse",
+      "Kwick is a vibrant food ordering platform designed for seamless food discovery, ordering, and community engagement",
+    techStack: "Flutter,Firebase,Django,MySQL,React Admin",
+    image: foodie1,
+    images: [foodie1, foodie2, foodie3, foodie4],
+    link: "#",
+    liveLink: "#",
+    repoLink: "#",
     features: [
-      "Service Management",
-      "Smart Service Search",
-      "Garage Locator Map",
-      "One-Click Booking",
-      "Maintenance Alerts",
-    ],
-  },
+      "User Profiles & Customization",
+      "Real-time Order Tracking",
+      "Restaurant Listings & Menus",
+      "Push Notifications & Order Updates",
+      "Secure Payment & Privacy Settings"
+    ]
+},
+{
+    id: "invoicegen",
+    title: "InvoiceGen, Invoice Generation & Product Management Platform",
+    description:
+      "InvoiceGen is a streamlined app designed for efficient invoice creation, product management, and business operations",
+    techStack: "Flutter,Firebase",
+    image: invoicegen1,
+    images: [invoicegen1, invoicegen2, invoicegen3, invoicegen4],
+    link: "#",
+    liveLink: "#",
+    repoLink: "#",
+    features: [
+      "User Profiles & Customization",
+      "Real-time Invoice Generation",
+      "Product Inventory Management",
+      "Push Notifications & Invoice Updates",
+      "Secure Data Storage & Privacy Settings"
+    ]
+},
+{
+    id: "artleap",
+    title: "ArtLeap, AI-Powered Image Generation Platform",
+    description:
+      "ArtLeap is an innovative AI application designed for seamless image generation, creative exploration, and user-friendly art creation",
+    techStack: "Flutter,Node.js,MongoDB,AWS",
+    image: artleap1,
+    images: [artleap1, artleap2, artleap3, artleap4],
+    link: "#",
+    liveLink: "#",
+    repoLink: "#",
+    features: [
+      "User Profiles & Customization",
+      "Real-time AI Image Generation",
+      "Art Project Management",
+      "Push Notifications & Creation Updates",
+      "Secure Cloud Storage & Privacy Settings"
+    ]
+},
+{
+    id: "archive",
+    title: "Archive, Online Document Sharing & Management Platform",
+    description:
+      "Archive is a robust platform designed for seamless document sharing, management, and collaboration",
+    techStack: "Next.js,React,Django,PostgreSQL",
+    image: archive1,
+    images: [archive1, archive2, archive3, archive4],
+    link: "#",
+    liveLink: "#",
+    repoLink: "#",
+    features: [
+      "User Profiles & Customization",
+      "Real-time Document Sharing",
+      "Document Organization & Management",
+      "Push Notifications & Update Alerts",
+      "Secure Data Storage & Privacy Settings"
+    ]
+},
+{
+    id: "ecommerce",
+    title: "ShopSwift, E-Commerce Web & Mobile Platform",
+    description:
+      "ShopSwift is a dynamic e-commerce platform designed for seamless online shopping, product browsing, and secure transactions",
+    techStack: "React,Flutter,Node.js,MongoDB",
+    image: shopswift1,
+    images: [shopswift1, shopswift2, shopswift3, shopswift4],
+    link: "#",
+    liveLink: "#",
+    repoLink: "#",
+    features: [
+      "User Profiles & Customization",
+      "Real-time Product Browsing",
+      "Cart & Wishlist Management",
+      "Push Notifications & Order Updates",
+      "Secure Payment & Privacy Settings"
+    ]
+},
+{
+    id: "etravelers",
+    title: "eTravelers, Travel Management Web & Mobile Platform",
+    description:
+      "eTravelers is a comprehensive travel platform designed for seamless flight and hotel booking, visa processing, travel blogs, and trip management",
+    techStack: "React,Flutter,Node.js,MongoDB",
+    image: etravelers1,
+    images: [etravelers1, etravelers2, etravelers3, etravelers4],
+    link: "#",
+    liveLink: "#",
+    repoLink: "#",
+    features: [
+      "User Profiles & Customization",
+      "Real-time Flight & Hotel Booking",
+      "Visa Application & Travel Blog Management",
+      "Push Notifications & Booking Updates",
+      "Secure Payment & Privacy Settings"
+    ]
+}
 ];
 
 export default projects;

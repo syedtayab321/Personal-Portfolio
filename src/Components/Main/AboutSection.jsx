@@ -52,7 +52,7 @@ const AboutSection = () => {
   const buttonVariants = {
     hover: {
       scale: 1.05,
-      backgroundColor: "rgba(212, 175, 55, 0.1)",
+      boxShadow: "0 5px 15px rgba(59, 130, 246, 0.3)",
       transition: { duration: 0.3 }
     },
     tap: {
@@ -61,91 +61,107 @@ const AboutSection = () => {
   };
 
   return (
-    <motion.div
+    <motion.section
       ref={ref}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       variants={containerVariants}
-      className="min-h-screen w-full flex flex-col md:flex-row items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-white py-16 px-4 sm:px-6 lg:px-8"
+      className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-20 px-4 sm:px-6 lg:px-8"
     >
-      {/* Left Side - Image */}
-      <motion.div 
-        variants={imageVariants}
-        whileHover="hover"
-        className="md:w-1/2 flex justify-center mb-10 md:mb-0"
-      >
-        <div className="relative">
-          <img
-            src={image}
-            alt="About Me"
-            className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full border-4 border-yellow-600 shadow-xl object-cover relative z-10"
-          />
-          <div className="absolute inset-0 rounded-full bg-yellow-600 blur-md opacity-30 animate-pulse"></div>
-          <div className="absolute -inset-2 rounded-full border-4 border-yellow-400 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-        </div>
-      </motion.div>
-
-      {/* Right Side - Content */}
-      <motion.div 
-        className="md:w-1/2 text-center md:text-left px-4 sm:px-6 max-w-2xl"
-        variants={containerVariants}
-      >
-        <motion.h2 
-          variants={itemVariants}
-          className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600"
-        >
-          About Me
-        </motion.h2>
-
-        <motion.p 
-          variants={itemVariants}
-          className="text-lg sm:text-xl text-gray-300 mb-6 leading-relaxed"
-        >
-          Hello There I am Tayyab Hussain a passionate <span className="text-yellow-400 font-semibold">Software Engineer</span> specializing in creating modern,
-          high-performing web and mobile applications. With expertise in both frontend
-          and backend technologies, I transform ideas into stunning digital experiences.
-        </motion.p>
-
-        <motion.p 
-          variants={itemVariants}
-          className="text-lg sm:text-xl text-gray-400 mb-8 leading-relaxed"
-        >
-          My tech stack includes <span className="text-yellow-400 font-semibold">React</span>, <span className="text-yellow-400 font-semibold">Django</span>, <span className="text-yellow-400 font-semibold">Laravel</span>, <span className="text-yellow-400 font-semibold">Next.js</span>, and <span className="text-yellow-400 font-semibold">Flutter</span>, ensuring
-          seamless and efficient solutions tailored to client needs.
-        </motion.p>
-
-        {/* Buttons */}
+      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center gap-16">
+        {/* Image Section */}
         <motion.div 
-          variants={itemVariants}
-          className="flex flex-wrap justify-center md:justify-start gap-4"
+          variants={imageVariants}
+          whileHover="hover"
+          className="lg:w-1/3 xl:w-2/5 flex justify-center"
         >
-          <motion.div
-            variants={buttonVariants}
-            whileHover="hover"
-            whileTap="tap"
+          <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96">
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 blur-xl opacity-20 animate-pulse" />
+            <img
+              src={image}
+              alt="Tayyab Hussain"
+              className="w-full h-full object-cover rounded-2xl border-4 border-blue-500/30 shadow-2xl relative z-10"
+            />
+            <div className="absolute -inset-4 rounded-2xl border-2 border-blue-400/30 opacity-0 hover:opacity-100 transition-opacity duration-300 z-0" />
+          </div>
+        </motion.div>
+
+        {/* Content Section */}
+        <motion.div 
+          className="lg:w-2/3 xl:w-3/5 text-center lg:text-left max-w-3xl"
+          variants={containerVariants}
+        >
+          <motion.h2 
+            variants={itemVariants}
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8"
           >
-            <Link
-              to="/projects"
-              className="inline-block border-2 border-yellow-500 px-6 py-3 text-yellow-500 font-semibold rounded-full hover:bg-yellow-500 hover:text-gray-900 transition-all duration-300"
-            >
-              View My Work
-            </Link>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+              About Me
+            </span>
+          </motion.h2>
+
+          <motion.div variants={itemVariants} className="space-y-6">
+            <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
+              Hello there! I'm <span className="text-blue-400 font-semibold">Tayyab Hussain</span>, a passionate <span className="text-purple-400 font-semibold">Software Engineer</span> specializing in creating modern, high-performing web and mobile applications.
+            </p>
+
+            <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
+              My tech stack includes:
+            </p>
+
+            <div className="flex flex-wrap justify-center lg:justify-start gap-3">
+              {[
+                { tech: 'React', color: 'text-blue-400 border-blue-400/20' },
+                { tech: 'Django', color: 'text-green-400 border-green-400/20' },
+                { tech: 'Laravel', color: 'text-red-400 border-red-400/20' },
+                { tech: 'Next.js', color: 'text-gray-300 border-gray-600' },
+                { tech: 'Flutter', color: 'text-cyan-400 border-cyan-400/20' },
+                { tech: 'Node.js', color: 'text-green-500 border-green-500/20' }
+              ].map((item) => (
+                <span key={item.tech} className={`px-4 py-2 bg-gray-800/50 border ${item.color} rounded-full text-sm font-medium`}>
+                  {item.tech}
+                </span>
+              ))}
+            </div>
+
+            <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
+              I deliver seamless and efficient solutions tailored to client needs, combining technical excellence with creative problem-solving.
+            </p>
           </motion.div>
-          <motion.div
-            variants={buttonVariants}
-            whileHover="hover"
-            whileTap="tap"
+
+          {/* Buttons */}
+          <motion.div 
+            variants={itemVariants}
+            className="flex flex-wrap justify-center lg:justify-start gap-6 mt-12"
           >
-            <Link
-              to="/contact"
-              className="inline-block border-2 border-yellow-500 px-6 py-3 text-yellow-500 font-semibold rounded-full hover:bg-yellow-500 hover:text-gray-900 transition-all duration-300"
+            <motion.div
+              variants={buttonVariants}
+              whileHover="hover"
+              whileTap="tap"
             >
-              Contact Me
-            </Link>
+              <Link
+                to="/projects"
+                className="inline-block px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
+              >
+                View My Work
+              </Link>
+            </motion.div>
+            <motion.div
+              variants={buttonVariants}
+              whileHover="hover"
+              whileTap="tap"
+            >
+              <Link
+                to="/contact"
+                className="inline-block px-8 py-3 bg-transparent border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300"
+              >
+                Contact Me
+              </Link>
+            </motion.div>
           </motion.div>
         </motion.div>
-      </motion.div>
-    </motion.div>
+      </div>
+    </motion.section>
   );
 };
 

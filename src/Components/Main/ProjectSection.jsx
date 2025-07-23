@@ -34,7 +34,7 @@ const ProjectsSection = () => {
   const hoverEffect = {
     hover: {
       y: -10,
-      boxShadow: "0 25px 50px -12px rgba(234, 179, 8, 0.25)",
+      boxShadow: "0 25px 50px -12px rgba(59, 130, 246, 0.25)",
       transition: {
         duration: 0.3,
         ease: "easeOut",
@@ -43,10 +43,10 @@ const ProjectsSection = () => {
   };
 
   return (
-    <motion.div
+    <motion.section
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
-      className="min-h-screen w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-white py-20 px-4 sm:px-6 lg:px-8"
+      className="min-h-screen w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-20 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
@@ -57,7 +57,7 @@ const ProjectsSection = () => {
           transition={{ duration: 0.8 }}
         >
           <motion.h2
-            className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600 mb-4"
+            className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 mb-4"
             whileHover={{ scale: 1.02 }}
           >
             My Projects
@@ -68,11 +68,10 @@ const ProjectsSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            A showcase of my latest work, combining innovation and
-            functionality.
+            A showcase of my latest work, combining innovation and functionality.
           </motion.p>
           <motion.div
-            className="h-1 w-20 bg-yellow-400 mx-auto mt-6"
+            className="h-1 w-20 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto mt-6"
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -90,10 +89,10 @@ const ProjectsSection = () => {
               key={project.id}
               variants={item}
               whileHover="hover"
-              className="relative group bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-yellow-400/30 transition-all duration-300"
+              className="relative group bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-blue-400/30 transition-all duration-300"
             >
               {/* Glow effect */}
-              <div className="absolute inset-0 bg-yellow-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-blue-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
               {/* Project Image */}
               <div className="relative h-64 overflow-hidden">
@@ -114,7 +113,7 @@ const ProjectsSection = () => {
                   {project.techStack.split(",").map((tech, index) => (
                     <span
                       key={index}
-                      className="text-xs font-medium px-2.5 py-1 rounded-full bg-gray-700 text-yellow-400"
+                      className="text-xs font-medium px-2.5 py-1 rounded-full bg-gray-700/80 text-blue-400 border border-blue-400/20"
                     >
                       {tech.trim()}
                     </span>
@@ -124,12 +123,12 @@ const ProjectsSection = () => {
                 <h3 className="text-2xl font-bold text-white mb-2">
                   {project.title}
                 </h3>
-                <p className="text-gray-300 mb-5">{project.description}</p>
+                <p className="text-gray-300 mb-5 line-clamp-3">{project.description}</p>
 
                 {/* View Project Button */}
                 <Link
                   to={`/projects/${project.id}`}
-                  className="inline-flex items-center justify-center px-6 py-3 rounded-full font-medium text-gray-900 bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 transition-all duration-300 shadow-lg hover:shadow-yellow-500/30"
+                  className="inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 transition-all duration-300 shadow-lg hover:shadow-blue-500/30"
                 >
                   View Project
                   <svg
@@ -150,7 +149,7 @@ const ProjectsSection = () => {
           ))}
         </motion.div>
       </div>
-    </motion.div>
+    </motion.section>
   );
 };
 
