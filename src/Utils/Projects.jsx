@@ -1,39 +1,10 @@
-import pinnup1 from './../assets/projectImages/Pinnup/White Purple Gradient Mobile Apps Presentation .png';
-import pinnup2 from './../assets/projectImages/Pinnup/thumbnail1.jpg';
-import pinnup3 from './../assets/projectImages/Pinnup/image1.png';
-import pinnup4 from './../assets/projectImages/Pinnup/image2.png';
-
+import pinnup1 from './../assets/projectImages/Pinnup/main.png';
 import foodie1 from './../assets/projectImages/Food app/kwick_banner.png';
-import foodie2 from './../assets/projectImages/Food app/1.png';
-import foodie3 from './../assets/projectImages/Food app/kwick-vendor.png';
-import foodie4 from './../assets/projectImages/Food app/4.png';
-
-import invoicegen1 from './../assets/projectImages/Invoice Generator/Pink 3D Mockups Sales Pitch Sales Presentation.png';
-import invoicegen2 from './../assets/projectImages/Invoice Generator/Screenshot_2025-07-18-00-24-43-358_com.example.invoice_generator.jpg';
-import invoicegen3 from './../assets/projectImages/Invoice Generator/Screenshot_2025-07-18-00-25-37-345_com.example.invoice_generator.jpg';
-import invoicegen4 from './../assets/projectImages/Invoice Generator/Screenshot_2025-07-18-15-29-29-728_com.example.invoice_generator-edit.jpg';
-
-import artleap1 from './../assets/projectImages/Artleap/White Purple Gradient Mobile Apps Presentation .png';
-import artleap2 from './../assets/projectImages/Artleap/Screenshot_2025-07-16-07-20-36-020_com.XrDIgital.ImaginaryVerse.jpg';
-import artleap3 from './../assets/projectImages/Artleap/Screenshot_2025-07-16-07-20-21-007_com.XrDIgital.ImaginaryVerse.jpg';
-import artleap4 from './../assets/projectImages/Artleap/Screenshot_2025-07-16-07-20-26-011_com.XrDIgital.ImaginaryVerse.jpg';
-
-import archive1 from './../assets/projectImages/Archiva/White Purple Gradient Mobile Apps Presentation  (1).png';
-import archive2 from './../assets/projectImages/Archiva/5.png';
-import archive3 from './../assets/projectImages/Archiva/4.png';
-import archive4 from './../assets/projectImages/Archiva/2.png';
-
-import shopswift1 from './../assets/projectImages/ecommerce_admin_portal/White Purple Gradient Mobile Apps Presentation  (1).png';
-import shopswift2 from './../assets/projectImages/ecommerce_admin_portal/Screenshot 2025-07-18 105638.png';
-import shopswift3 from './../assets/projectImages/ecommerce_admin_portal/Screenshot 2025-07-18 105621.png';
-import shopswift4 from './../assets/projectImages/ecommerce_admin_portal/Screenshot 2025-07-18 105715.png';
-
-
+import invoicegen1 from './../assets/projectImages/Invoice Generator/main.png';
+import artleap1 from './../assets/projectImages/Artleap/main.png';
+import archive1 from './../assets/projectImages/Archiva/main.png';
+import shopswift1 from './../assets/projectImages/ecommerce_admin_portal/main.png';
 import etravelers1 from './../assets/projectImages/e_travels/main.png';
-import etravelers2 from './../assets/projectImages/e_travels/login.png';
-import etravelers3 from './../assets/projectImages/e_travels/Screenshot 2025-07-19 144148.png';
-import etravelers4 from './../assets/projectImages/e_travels/Screenshot 2025-07-19 144329.png';
-
 const projects = [
   {
     id: "pinnup",
@@ -42,7 +13,7 @@ const projects = [
       " PinnUp is a dynamic Event  platform designed for seamless event sharing, community engagement",
     techStack: "React,Django,PostgreSQL,AI",
     image: pinnup1,
-    images: [pinnup1, pinnup2, pinnup3, pinnup4],
+    images: [pinnup1],
     link: "#",
     liveLink: "#",
     repoLink: "#",
@@ -61,7 +32,7 @@ const projects = [
       "Kwick is a vibrant food ordering platform designed for seamless food discovery, ordering, and community engagement",
     techStack: "Flutter,Firebase,Django,MySQL,React Admin",
     image: foodie1,
-    images: [foodie1, foodie2, foodie3, foodie4],
+    images: [foodie1],
     link: "#",
     liveLink: "#",
     repoLink: "#",
@@ -80,7 +51,7 @@ const projects = [
       "InvoiceGen is a streamlined app designed for efficient invoice creation, product management, and business operations",
     techStack: "Flutter,Firebase",
     image: invoicegen1,
-    images: [invoicegen1, invoicegen2, invoicegen3, invoicegen4],
+    images: [invoicegen1],
     link: "#",
     liveLink: "#",
     repoLink: "#",
@@ -99,7 +70,7 @@ const projects = [
       "ArtLeap is an innovative AI application designed for seamless image generation, creative exploration, and user-friendly art creation",
     techStack: "Flutter,Node.js,MongoDB,AWS",
     image: artleap1,
-    images: [artleap1, artleap2, artleap3, artleap4],
+    images: [artleap1],
     link: "#",
     liveLink: "#",
     repoLink: "#",
@@ -118,7 +89,7 @@ const projects = [
       "Archive is a robust platform designed for seamless document sharing, management, and collaboration",
     techStack: "Next.js,React,Django,PostgreSQL",
     image: archive1,
-    images: [archive1, archive2, archive3, archive4],
+    images: [archive1],
     link: "#",
     liveLink: "#",
     repoLink: "#",
@@ -137,7 +108,7 @@ const projects = [
       "ShopSwift is a dynamic e-commerce platform designed for seamless online shopping, product browsing, and secure transactions",
     techStack: "React,Flutter,Node.js,MongoDB",
     image: shopswift1,
-    images: [shopswift1, shopswift2, shopswift3, shopswift4],
+    images: [shopswift1],
     link: "#",
     liveLink: "#",
     repoLink: "#",
@@ -156,7 +127,7 @@ const projects = [
       "eTravelers is a comprehensive travel platform designed for seamless flight and hotel booking, visa processing, travel blogs, and trip management",
     techStack: "React,Flutter,Node.js,MongoDB",
     image: etravelers1,
-    images: [etravelers1, etravelers2, etravelers3, etravelers4],
+    images: [etravelers1],
     link: "#",
     liveLink: "#",
     repoLink: "#",
