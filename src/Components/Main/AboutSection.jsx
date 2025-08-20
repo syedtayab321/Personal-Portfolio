@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import image from './../../assets/images/own_image.jpeg';
+import image from './../../assets/images/profile2.png';
 
 const AboutSection = () => {
   return (
