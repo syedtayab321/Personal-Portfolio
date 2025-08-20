@@ -30,7 +30,7 @@ const ContactMe = () => {
             </a>
 
             <a
-              href="https://wa.me/+923365298230"
+              href="https://wa.me/+923160854067"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-2 border-2 border-purple-500 text-purple-400 px-6 py-2.5 rounded-lg font-semibold hover:bg-purple-500/10 transition-colors duration-200 text-sm sm:text-base"
