@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 const experiences = [
   {
     company: "mimAR | 3D Architectural Visualization Company",
-    role: "Software Developer (Onsite)",
+    role: "Senior Mobile App Developer (Onsite)",
     duration: "June 2025 - Present",
     description: "Led the development of architectural visualization web applications at mimAR in Islamabad, utilizing Flutter and Node.js. Designed and implemented scalable backend solutions, and collaborated with cross-functional teams to deliver high-quality projects.",
   },
