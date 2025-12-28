@@ -101,7 +101,7 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, type: "spring" }}
-      className={`fixed w-full z-50 ${
+      className={` w-full z-50 ${
         scrolled
           ? "bg-slate-900/95 backdrop-blur-xl shadow-2xl"
           : "bg-slate-900/90 backdrop-blur-lg"
@@ -120,8 +120,7 @@ const Navbar = () => {
               to="/"
               className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent flex items-center"
             >
-              <span className="mr-2 text-2xl">🚀</span>
-              <span>Syed Tayyab</span>
+              <span>Personal Portfolio</span>
             </Link>
           </motion.div>
 

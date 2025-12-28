@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useRef } from "react";
-import image from './../../assets/images/profile3.png';
+import image from './../../assets/images/profile2.png';
 
 const AboutSection = () => {
   const canvasRef = useRef(null);

@@ -73,8 +73,8 @@ const ProjectsSection = () => {
   }, []);
 
   return (
-    <section className="min-h-screen w-full bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      <canvas ref={canvasRef} className="absolute inset-0" />
+    <section className="min-h-fit w-full bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* <canvas ref={canvasRef} className="absolute inset-0" /> */}
       
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-10 left-10 w-64 h-64 bg-cyan-600 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse-slow" />
