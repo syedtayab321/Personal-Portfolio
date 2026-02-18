@@ -4,39 +4,45 @@ import { useEffect, useRef } from "react";
 const experiences = [
   {
     company: "mimAR | 3D Architectural Visualization Company",
-    role: "Senior Mobile App Developer (Onsite)",
+    role: "Mobile Application Developer (Onsite)",
     duration: "June 2025 - Present",
-    description: "Led the development of architectural visualization web applications at mimAR in Islamabad, utilizing Flutter and Node.js. Designed and implemented scalable backend solutions, and collaborated with cross-functional teams to deliver high-quality projects.",
+    description:
+      "Led the development of architectural visualization web applications at mimAR in Islamabad, utilizing Flutter and Node.js. Designed and implemented scalable backend solutions, and collaborated with cross-functional teams to deliver high-quality projects.",
   },
   {
-    company: "Mecarvi Prints",
-    role: "Frontend Developer (Part-Time)",
-    duration: "Jan 2025 - August 2025",
-    description: "Developed responsive and user-friendly web interfaces using React. Collaborated with design teams to implement visually appealing UI components and optimized front-end performance for seamless user experiences.",
+    company: "Mecarvi Technologies | USA Based Company",
+    role: "Full Stack Developer",
+    duration: "March 2025 - August 2025",
+    description:
+      "Built and maintained responsive web applications using React and integrated back-end services. Collaborated with cross-functional teams to deliver visually engaging, high-performance user interfaces, ensuring seamless user experiences across devices.",
   },
   {
     company: "FalconXoft",
-    role: "Full Stack Developer",
+    role: "Full Stack Developer | Lahore Pakistan",
     duration: "Jan 2025 - March 2025",
-    description: "Led development of enterprise web applications using React, Next.js, and Django. Architected scalable backend solutions and mentored junior developers to enhance team productivity.",
+    description:
+      "Led development of enterprise web applications using React, Next.js, and Django. Architected scalable backend solutions and mentored junior developers to enhance team productivity.",
   },
   {
-    company: "Fiver/Upwork",
-    role: "Flutter App Developer",
+    company: "Fiverr/Upwork",
+    role: "Full Stack Developer",
     duration: "Jan 2021 - Present",
-    description: "Developed mobile applications using Flutter, Firebase, and Node.js. Focused on performance optimization and responsive UI/UX design to meet client requirements.",
+    description:
+      "Developed full-stack web applications using Django and Next.js, and mobile applications using React Native and Flutter. Integrated back-end services with Node.js and Firebase, delivering responsive, high-performance solutions with optimized UI/UX for client projects across web and mobile platforms.",
   },
   {
     company: "CsEra Pvt Ltd",
     role: "Full Stack Developer",
     duration: "June 2023 - Feb 2024",
-    description: "Developed full-stack web and mobile applications using React, Next.js, Node.js, Django, Laravel, Flutter, and Firebase. Implemented CI/CD pipelines and optimized database performance for efficient project delivery.",
+    description:
+      "Developed Full-stack web and mobile applications using React, Next.js, Node.js, Django, Laravel, Flutter, and Firebase. Implemented CI/CD pipelines and optimized database performance for efficient project delivery.",
   },
   {
     company: "First Light - UAE Based Company",
-    role: "Flutter App Developer",
+    role: "Mobile Application Developer",
     duration: "May 2024 - Nov 2024",
-    description: "Built cross-platform mobile applications with Flutter, integrated RESTful APIs, and implemented Firebase authentication and real-time database solutions for robust app functionality.",
+    description:
+      "Built cross-platform mobile applications with Flutter,React Native, integrated RESTful APIs, and implemented Firebase authentication and real-time database solutions for robust app functionality.",
   },
 ];
 
@@ -44,9 +50,11 @@ const technicalSkills = [
   { name: "React.js", percentage: 90 },
   { name: "Next.js", percentage: 90 },
   { name: "Node.js", percentage: 90 },
+  { name: "Express.js", percentage: 85 },
   { name: "Django", percentage: 85 },
   { name: "Laravel", percentage: 75 },
   { name: "Flutter", percentage: 90 },
+  { name: "React Native", percentage: 85 },
   { name: "Firebase/MongoDB", percentage: 85 },
   { name: "MySQL/PostgreSQL", percentage: 85 },
   { name: "Bootstrap/Tailwind", percentage: 90 },
@@ -65,9 +73,29 @@ const professionalQualities = [
 ];
 
 const technologies = [
-  "React", "Next.js", "Django", "Laravel", "Flutter", "Firebase", "Node.js", 
-  "GraphQL", "Docker", "AWS", "Git", "CI/CD", "REST APIs", "MongoDB", "PostgreSQL", 
-  "Tailwind CSS", "Material UI", "Redux", "TypeScript", "DevOps", "AI Integrations"
+  "React",
+  "Next.js",
+  "Django",
+  "Laravel",
+  "Flutter",
+  "React Native",
+  "Express.js",
+  "Firebase",
+  "Node.js",
+  "GraphQL",
+  "Docker",
+  "AWS",
+  "Git",
+  "CI/CD",
+  "REST APIs",
+  "MongoDB",
+  "PostgreSQL",
+  "Tailwind CSS",
+  "Material UI",
+  "Redux",
+  "TypeScript",
+  "DevOps",
+  "AI Integrations",
 ];
 
 const ExperienceSkills = () => {
@@ -77,7 +105,7 @@ const ExperienceSkills = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
@@ -117,10 +145,10 @@ const ExperienceSkills = () => {
     }
 
     function animate() {
-      ctx.fillStyle = 'rgba(15, 23, 42, 0.03)';
+      ctx.fillStyle = "rgba(15, 23, 42, 0.03)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      particles.forEach(particle => {
+      particles.forEach((particle) => {
         particle.update();
         particle.draw();
       });
@@ -135,13 +163,12 @@ const ExperienceSkills = () => {
       canvas.height = window.innerHeight;
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
     <section className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-64 h-64 bg-cyan-600 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse-slow" />
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-purple-600 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-bounce-slow" />
@@ -176,14 +203,20 @@ const ExperienceSkills = () => {
                     </div>
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">{exp.company}</h4>
+                    <h4 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                      {exp.company}
+                    </h4>
                     <div className="flex flex-wrap items-center gap-2 mb-3">
                       <span className="px-3 py-1 bg-cyan-500/10 text-cyan-400 rounded-full text-sm font-medium border border-cyan-500/30">
                         {exp.role}
                       </span>
-                      <span className="text-gray-400 text-sm">{exp.duration}</span>
+                      <span className="text-gray-400 text-sm">
+                        {exp.duration}
+                      </span>
                     </div>
-                    <p className="text-gray-300 text-sm leading-relaxed">{exp.description}</p>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      {exp.description}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -200,10 +233,17 @@ const ExperienceSkills = () => {
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {professionalQualities.map((quality, index) => (
-              <div key={index} className="backdrop-blur-sm bg-slate-800/30 p-4 rounded-2xl border border-slate-700/50">
+              <div
+                key={index}
+                className="backdrop-blur-sm bg-slate-800/30 p-4 rounded-2xl border border-slate-700/50"
+              >
                 <div className="flex justify-between mb-2">
-                  <span className="text-gray-300 font-medium">{quality.name}</span>
-                  <span className="text-purple-400 font-bold">{quality.percentage}%</span>
+                  <span className="text-gray-300 font-medium">
+                    {quality.name}
+                  </span>
+                  <span className="text-purple-400 font-bold">
+                    {quality.percentage}%
+                  </span>
                 </div>
                 <div className="w-full bg-slate-700/50 h-2 rounded-full overflow-hidden">
                   <div
@@ -226,10 +266,17 @@ const ExperienceSkills = () => {
             </h3>
             <div className="space-y-4">
               {technicalSkills.map((skill, index) => (
-                <div key={index} className="backdrop-blur-sm bg-slate-800/30 p-4 rounded-2xl border border-slate-700/50">
+                <div
+                  key={index}
+                  className="backdrop-blur-sm bg-slate-800/30 p-4 rounded-2xl border border-slate-700/50"
+                >
                   <div className="flex justify-between mb-2">
-                    <span className="text-gray-300 font-medium">{skill.name}</span>
-                    <span className="text-cyan-400 font-bold">{skill.percentage}%</span>
+                    <span className="text-gray-300 font-medium">
+                      {skill.name}
+                    </span>
+                    <span className="text-cyan-400 font-bold">
+                      {skill.percentage}%
+                    </span>
                   </div>
                   <div className="w-full bg-slate-700/50 h-2 rounded-full overflow-hidden">
                     <div
